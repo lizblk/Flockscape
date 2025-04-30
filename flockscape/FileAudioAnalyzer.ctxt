@@ -1,0 +1,28 @@
+#BlueJ class context
+comment0.target=FileAudioAnalyzer
+comment0.text=\n\ Reads\ an\ audio\ file\ on\ a\ background\ thread,\ computes\ both\ boosted\ loudness\ (0\u20131)\n\ and\ dominant-frequency\ tone\ (0\u20131).\n\n\ <ul>\n\ \ \ <li>Works\ out-of-the-box\ with\ 16-bit\ PCM\ WAV.</li>\n\ \ \ <li>Works\ with\ MP3/OGG/etc.\ if\ JavaSound\ SPI\ decoders\ are\ on\ class-path\n\ \ \ \ \ \ \ (e.g.\ mp3spi-1.9.5.jar\ +\ tritonus_share.jar).</li>\n\ </ul>\n\n\ Usage\:\n\ <pre>\n\ \ \ AudioSource\ audio\ \=\ new\ FileAudioAnalyzer("track.wav");\n\ </pre>\n\n\ Implements\ {@link\ AudioSource}\ for\ use\ with\ both\ file\ and\ microphone\ analyzers,\n\ and\ {@link\ Runnable}\ for\ background\ processing.\n\n\ @author\ Poul\ Henriksen\n\ @version\ 1.0\n
+comment1.params=path
+comment1.target=FileAudioAnalyzer(java.lang.String)
+comment1.text=\n\ Constructor\:\ starts\ background\ thread\ to\ analyze\ the\ specified\ audio\ file.\n\n\ @param\ path\ file\ path\ to\ the\ audio\ track\n
+comment2.params=
+comment2.target=double\ getLevel()
+comment2.text=\n\ Returns\ the\ boosted\ RMS\ level\ (0\u20131).\n\n\ @return\ current\ boosted\ level\n
+comment3.params=
+comment3.target=double\ getTone()
+comment3.text=\n\ Returns\ the\ dominant-frequency\ tone\ (0\u20131).\n\n\ @return\ current\ tone\ ratio\n
+comment4.params=
+comment4.target=void\ run()
+comment4.text=\n\ Core\ loop\:\ read\ audio\ frames,\ perform\ FFT,\ compute\ RMS\ and\ tone,\n\ and\ pace\ processing\ to\ real-time.\n
+comment5.params=
+comment5.target=double\ getRaw()
+comment5.text=\n\ Returns\ unclipped\ raw\ RMS\ energy.\n\n\ @return\ raw\ RMS\ value\n
+comment6.params=
+comment6.target=boolean\ isRunning()
+comment6.text=\n\ Indicates\ whether\ the\ file\ analysis\ is\ still\ running\ (EOF\ not\ reached).\n\n\ @return\ true\ if\ still\ processing,\ false\ once\ done\n
+comment7.params=re\ im
+comment7.target=void\ fft1024(double[],\ double[])
+comment7.text=\n\ In-place\ radix-2\ FFT\ for\ 1024-point\ real\ signal.\n\n\ @param\ re\ real\ part\ array\ (length\ 1024)\n\ @param\ im\ imaginary\ part\ array\ (length\ 1024)\n
+comment8.params=v
+comment8.target=double\ clamp01(double)
+comment8.text=\n\ Clamp\ a\ value\ to\ the\ [0,1]\ range.\n\n\ @param\ v\ input\ value\n\ @return\ clamped\ value\n
+numComments=9

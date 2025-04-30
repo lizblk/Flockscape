@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=AudioAnalyzer
+comment0.text=\n\ Captures\ audio\ from\ the\ default\ microphone,\ computes\ realtime\ loudness\ (RMS)\n\ and\ dominant-frequency\ tone\ via\ a\ 1024-point\ FFT,\ and\ exposes\ these\ metrics.\n\ \n\ <ul>\n\ \ \ <li>loudness\ \ getLevel()\:\ 0.0\ (silence)\ to\ 1.0\ (clipping,\ boosted)</li>\n\ \ \ <li>tone\ \ \ \ \ \ getTone()\:\ 0.0\ (bass)\ to\ 1.0\ (treble)</li>\n\ \ \ <li>raw\ energy\ getRaw()\:\ unclipped\ RMS\ 0.0\u2013~0.25</li>\n\ </ul>\n\ \n\ Runs\ in\ a\ background\ thread\ to\ avoid\ blocking\ the\ Greenfoot\ "act"\ loop.\n
+comment1.params=
+comment1.target=AudioAnalyzer()
+comment1.text=\n\ Starts\ the\ microphone\ capture\ thread\ immediately.\n
+comment2.params=
+comment2.target=double\ getLevel()
+comment2.text=\n\ Returns\ boosted\ loudness\ (0.0\u20131.0).\n
+comment3.params=
+comment3.target=double\ getTone()
+comment3.text=\n\ Returns\ dominant-frequency\ tone\ (0.0\ bass\ \u2013\ 1.0\ treble).\n
+comment4.params=
+comment4.target=double\ getRaw()
+comment4.text=\n\ Returns\ raw\ RMS\ energy\ (unclipped).\n
+comment5.params=
+comment5.target=void\ capture()
+comment5.text=\n\ Continuously\ captures\ audio,\ computes\ FFT,\ and\ updates\ level/tone/raw.\n
+comment6.params=re\ im
+comment6.target=void\ fft1024(double[],\ double[])
+comment6.text=\n\ In-place\ radix-2\ FFT\ for\ 1024-sample\ real\ signal.\n\ @param\ re\ real\ components\n\ @param\ im\ imaginary\ components\ (initialized\ to\ zero)\n
+comment7.params=v
+comment7.target=double\ clamp01(double)
+comment7.text=\n\ Clamps\ a\ value\ to\ [0.0,\ 1.0].\n\ @param\ v\ input\ value\n\ @return\ clamped\ result\n
+numComments=8

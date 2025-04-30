@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LetterTargets
+comment0.text=\n\ LetterTargets.java\n\n\ Utility\ class\ to\ convert\ a\ given\ word\ into\ a\ set\ of\ target\n\ pixel\ coordinates,\ suitable\ for\ assigning\ to\ boids\ in\ the\ sky.\n\n\ Steps\:\n\ \ 1.\ Choose\ the\ largest\ font\ size\ that\ fits\ the\ world\ dimensions.\n\ \ 2.\ Sample\ opaque\ pixels\ at\ a\ grid\ step\ so\ that\ the\ total\ number\n\ \ \ \ \ of\ targets\ does\ not\ exceed\ the\ desired\ maxPoints.\n\ \ 3.\ Center\ and\ shuffle\ the\ resulting\ list\ of\ {@link\ Vector}\n\ \ \ \ \ positions.\n\n\ The\ returned\ list\ is\ a\ constant-time\ subList\ if\ it\ exceeds\ maxPoints.\n\n\ This\ class\ contains\ only\ static\ methods\ and\ cannot\ be\ instantiated.\n\n\ @author\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=LetterTargets()
+comment1.text=\n\ Private\ constructor\ to\ prevent\ instantiation.\n
+comment2.params=word\ worldW\ worldH\ maxPoints
+comment2.target=java.util.List\ forWord(java.lang.String,\ int,\ int,\ int)
+comment2.text=\n\ Rasterise\ a\ word\ into\ a\ list\ of\ pixel\ coordinates\ (\u2264\ maxPoints),\n\ centered\ within\ the\ world\ and\ shuffled\ for\ organic\ assignment.\n\n\ @param\ word\ \ \ \ \ \ The\ text\ to\ render\ (all\ caps\ recommended).\n\ @param\ worldW\ \ \ \ Width\ of\ the\ world\ in\ pixels.\n\ @param\ worldH\ \ \ \ Height\ of\ the\ world\ in\ pixels.\n\ @param\ maxPoints\ Maximum\ number\ of\ target\ coordinates\ to\ return.\n\ @return\ A\ shuffled\ list\ of\ {@link\ Vector}\ positions\ for\ boid\ targets.\n
+comment3.params=img
+comment3.target=int\ countOpaque(greenfoot.GreenfootImage)
+comment3.text=\n\ Count\ the\ number\ of\ opaque\ pixels\ (alpha\ >\ 128)\ in\ the\ image.\n\n\ @param\ img\ The\ image\ to\ scan.\n\ @return\ The\ count\ of\ opaque\ pixels.\n
+numComments=4

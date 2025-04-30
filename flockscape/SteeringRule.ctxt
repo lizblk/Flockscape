@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SteeringRule
+comment0.text=\n\ steering\ rule\ produces\ an\ acceleration\ vector\ for\ one\ animation\ tick\n\ treat\ rules\ like\ Lego\ bricks,\ sort\ of?\ \ each\ rule\ looks\ at\ the\ current\ boid\n\ and\ the\ entire\ flock,\ then\ returns\ a\ vector\ whose\ components\ will\ be\ added\ to\ that\ boid\u2019s\ overall\n\ acceleration\n\ world-step\ streams\ over\ a\ List\ of\ rules\ and\ sums\ their\ contributions\n
+comment1.params=self\ flock
+comment1.target=Vector\ apply(Boid,\ java.util.List)
+comment1.text=\n\ compute\ the\ rule\u2019s\ contribution\n\n\ @param\ self\ \ \ the\ boid\ that\ the\ rule\ is\ being\ evaluated\ for\n\ @param\ flock\ \ every\ boid\ in\ the\ world\ including\ self\n\ @return\ a\ new\ vector\ to\ add\ to\ the\ boid\u2019s\ acceleration\n
+numComments=2

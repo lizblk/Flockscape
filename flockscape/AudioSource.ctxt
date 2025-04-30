@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=AudioSource
+comment1.params=
+comment1.target=double\ getLevel()
+comment1.text=Loudness\ 0\ \u2013\ 1\ (after\ boost\ curve)
+comment2.params=
+comment2.target=double\ getTone()
+comment2.text=Dominant-frequency\ ratio\ 0\ \u2013\ 1\ \ (bass\ \u2192\ 0,\ treble\ \u2192\ 1)
+comment3.params=
+comment3.target=double\ getRaw()
+comment3.text=unclipped\ RMS\ 0-~0.25\ (never\ saturates)
+numComments=4
